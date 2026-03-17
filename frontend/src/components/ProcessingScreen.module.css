@@ -1,0 +1,96 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  animation: fadeIn 0.4s ease-out both;
+  min-height: 340px;
+}
+
+.scanner {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(0, 229, 255, 0.02);
+}
+
+.scanBar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent),
+    transparent
+  );
+  box-shadow: 0 0 12px var(--accent-glow), 0 0 24px rgba(0, 229, 255, 0.1);
+  animation: scanLine 2.4s ease-in-out infinite;
+}
+
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+
+.cornerTL,
+.cornerTR,
+.cornerBL,
+.cornerBR {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-color: var(--accent);
+  border-style: solid;
+  border-width: 0;
+}
+
+.cornerTL {
+  top: 8px;
+  left: 8px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+
+.cornerTR {
+  top: 8px;
+  right: 8px;
+  border-top-width: 2px;
+  border-right-width: 2px;
+}
+
+.cornerBL {
+  bottom: 8px;
+  left: 8px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+
+.cornerBR {
+  bottom: 8px;
+  right: 8px;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+
+.text {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  color: var(--text-primary);
+}
+
+.subtext {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}

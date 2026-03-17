@@ -1,0 +1,120 @@
+.wrapper {
+  width: 100%;
+  max-width: 520px;
+  animation: fadeIn 0.4s ease-out both;
+  text-align: center;
+}
+
+.verdict {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.verdictReal {
+  color: var(--success);
+}
+
+.verdictFake {
+  color: var(--danger);
+}
+
+.icon {
+  font-size: 2.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.confidenceSection {
+  margin-top: 1.75rem;
+  padding: 1.5rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+}
+
+.confidenceLabel {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.confidenceValue {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.confidenceValueReal {
+  color: var(--success);
+}
+
+.confidenceValueFake {
+  color: var(--danger);
+}
+
+.barTrack {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 3px;
+  animation: barFill 1s ease-out both;
+}
+
+.barFillReal {
+  background: var(--success);
+  box-shadow: 0 0 8px rgba(0, 230, 118, 0.3);
+}
+
+.barFillFake {
+  background: var(--danger);
+  box-shadow: 0 0 8px rgba(255, 61, 0, 0.3);
+}
+
+.framesInfo {
+  margin-top: 1rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.disclaimer {
+  margin-top: 1.5rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.resetBtn {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.resetBtn:hover {
+  border-color: var(--accent);
+  background: rgba(0, 229, 255, 0.04);
+}
