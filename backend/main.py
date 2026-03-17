@@ -18,6 +18,7 @@ app.add_middleware(
 )
 
 UPLOAD_DIR = os.path.join(os.path.dirname(__file__), "temp_uploads")
+os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 ALLOWED_IMAGE_TYPES = {"image/jpeg", "image/png"}
 ALLOWED_VIDEO_TYPES = {"video/mp4", "video/quicktime"}
